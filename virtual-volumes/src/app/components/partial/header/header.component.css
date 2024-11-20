@@ -1,6 +1,6 @@
 .navbar-brand
 {
-    background-color: rgb(13, 8, 45);
+    background-color: #fcefbd;
     font-weight: bold;
     color: orange;
     border-radius: 10px;
@@ -9,25 +9,21 @@
 }
 
 .navbar{
-    background-color: rgb(13, 8, 45);
+    background-color: #fcefbd;
 }
-.nav-link 
-{
-    color: orange;
-    font-size: 1.2rem;
+
+.nav-link{
+    border: 1px solid transparent;
+    transition: all .3s ease-in-out;
+    border-radius: 50px;
 }
-.btn{
-    border-color: rgb(253, 67, 18);
-    background-color: rgb(253, 67, 18);
-    color: antiquewhite;
-    font-weight: bold;
+
+.nav-link:hover{
+    background-color: #fcefbd;
+    border: 1px solid #000;
+    border-radius: 50px;
 }
-.btn:hover
-{
-    background-color: white;
-    border:2px solid rgb(253, 67, 18);
-    color: rgb(253, 67, 18);
-}
+
 .d-flex
 {
     border-radius: 5px;
@@ -36,26 +32,24 @@
     padding: 5px 8px;
     font-size: 16px;
 }
-.form-control 
-{
-   border: 0;
+
+.edit-form {
+    outline: 0;
+    border: none;
 }
-.form-control :hover
-{
-    border:0;
-    box-shadow: 0;
+
+.edit-form:active {
+    outline: 0;
+    border: none;
 }
 
 .bi
 {
-    width: ;
-    height:;
     color: black;
     top: 1px;
     right: 3px;
     padding: 5px;
     position: relative;
-    background-color: ;
     margin: 0.5px;
     border-radius: 50%;
 }
