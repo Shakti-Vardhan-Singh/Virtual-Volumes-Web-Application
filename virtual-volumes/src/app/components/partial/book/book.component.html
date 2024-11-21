@@ -1,11 +1,11 @@
 <div class="edit-container">
-    <button id="prev-btn"><i class="bi bi-arrow-left-circle-fill color-edit"></i></button>
+    <button id="prev-btn" (click)="goPrevious()"><i class="bi bi-arrow-left-circle-fill color-edit"></i></button>
 
 
     <!-- The Book -->
-    <div id="book" class="book">
+    <div id="book" class="book" [ngStyle]="{'transform': bookTransform}">
         <!-- Paper 1 -->
-        <div id="p1" class="paper">
+        <div id="p1" class="paper" [ngClass]="{'flipped': currentState > 1}" [ngStyle]="{'z-index': getZIndex(1)}">
             <div class="front">
                 <div id="f1" class="front-content">
                     <h1 class="book-title">Little Dog</h1>
@@ -26,7 +26,7 @@
             </div>
         </div>
         <!-- Paper 2 -->
-        <div id="p2" class="paper">
+        <div id="p2" class="paper" [ngClass]="{'flipped': currentState > 2}">
             <div class="front">
                 <div id="f2" class="front-content">
                     <h1>Some Cool Page</h1>
@@ -53,5 +53,5 @@
         </div>
     </div>
 
-    <button id="next-btn"><i class="bi bi-arrow-right-circle-fill color-edit"></i></button>
+    <button id="next-btn" (click)="goNext()"><i class="bi bi-arrow-right-circle-fill color-edit"></i></button>
 </div>
